@@ -1,13 +1,5 @@
-"""
-# -*- coding: utf-8 -*-
-Created on Mon Mar 18 23:29:07 2019
-
-@author: shin
-"""
 def bubble_sort(items):
-
-    '''Return array of items, sorted in ascending order'''
-
+    """ Implementation of bubble sort """
     out = items.copy() # in place protection on items
     for i in range(len(out)):
         for j in range(len(out)-1-i):
@@ -16,9 +8,7 @@ def bubble_sort(items):
 
     return out
 
-def merge_sort(items):
-
-    def merge(A, B):
+def merge(A, B):
     new_list = []
     while len(A) > 0 and len(B) > 0:
         if A[0] < B[0]:
@@ -35,6 +25,9 @@ def merge_sort(items):
 
     return new_list
 
+
+def merge_sort(items):
+
     len_i = len(items)
     if len_i == 1:
         return items
@@ -46,9 +39,24 @@ def merge_sort(items):
     return merge(i1, i2)
 
 def quick_sort(items):
+    """
+    the quick sort algorithm takes in an unsorted list of numbers.
+    returns a list in ascending order.
 
-    '''Return array of items, sorted in ascending order'''
+    Parameters
+    ----------
+    items : list
+        list of unordered numbers
+    index: int, optional
+        index number at which to choose the split value
+        default set to the last item in the input list
 
+    Returns
+    -------
+    list
+        list of elements in items in ascending order
+    """
+    index=-1
     len_i = len(items)
 
     if len_i <= 1:
