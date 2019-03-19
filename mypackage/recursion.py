@@ -24,7 +24,9 @@ def fibonacci(number):
         return fibonacci(number - 1) + fibonacci(number - 2)
 
 def factorial(n):
-    if n == 0 | n == 1:
+    if n == 0:
+        return(1)
+    elif n == 1:
         return(1)
     else:
         return(n * factorial(n - 1))
