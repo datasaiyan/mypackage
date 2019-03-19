@@ -11,13 +11,14 @@ def sum_array(array):
     else:
         return array[0] + sum_array(array[1:])
 
-def fibonacci(n):
-    if n == 0:
-        return(0)
-    elif n == 1 | n == 2:
-        return(1)
-    else:
-        return(fibonacci(n - 1) + fibonacci(n - 2))
+def fibonacci(number):
+    """
+    the Fibonacci sequenceis characterized by the fact that every number
+    after the first two is the sum of the two preceding ones
+    """
+    if number <= 1:
+        return 1
+    return fibonacci(number - 2) + fibonacci(number - 1)
 
 def factorial(n):
     if n == 0 | n == 1:
