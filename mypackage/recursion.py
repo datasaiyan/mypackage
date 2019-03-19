@@ -33,4 +33,4 @@ def reverse(word):
     if word == "":
         return(word)
     else:
-        word[-1] + reverse(word[:-1])
+        return(word[-1] + reverse(word[:-1]))
