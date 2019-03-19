@@ -18,7 +18,10 @@ def fibonacci(number):
     """
     if number <= 1:
         return 1
-    return fibonacci(number - 2) + fibonacci(number - 1)
+    elif number == 0:
+        return(0)
+    else:
+        return fibonacci(number - 1) + fibonacci(number - 2)
 
 def factorial(n):
     if n == 0 | n == 1:
