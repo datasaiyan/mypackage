@@ -16,9 +16,9 @@ def fibonacci(number):
     the Fibonacci sequenceis characterized by the fact that every number
     after the first two is the sum of the two preceding ones
     """
-    if number <= 1:
+    if number == 1:
         return 1
-    elif number == 0:
+    elif number <= 0:
         return(0)
     else:
         return fibonacci(number - 1) + fibonacci(number - 2)
